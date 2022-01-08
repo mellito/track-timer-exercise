@@ -1,0 +1,188 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Rubik', sans-serif;
+}
+
+body{
+        background-color:hsl(226, 43%, 10%);
+        font-family: 'Rubik', sans-serif;
+        color:white;
+}
+
+/*CONTAINER*/
+
+.container{
+    width:100%;
+    height:100vh;
+    display: grid;
+    place-items: center;
+}
+
+.container-tracker{
+    height:auto;
+    width:auto;
+    display:flex;
+    gap:16px;
+    overflow:hidden;
+}
+
+
+/*PROFILE TOP */
+
+.profile-right{
+    
+    background-color:hsl(235, 46%, 20%);
+    border-radius: 0 0px 10px 10px;
+}
+
+/*PROFILE TOP RIGHT*/
+
+.profile-top{
+    position:relative;
+    padding:20px 60px 50px 20px;
+    background-color:hsl(246, 80%, 60%);
+    border-radius: 10px;   
+    text-align: left; 
+    z-index: 2;
+}
+
+
+.profile-top img{
+    height:50px;
+    border-radius: 50%;
+    border: 2px solid #ffffff;
+    margin-bottom:20px;
+}
+
+.profile-top p:nth-child(2){
+    font-size: 9px;
+    color:hsl(236, 100%, 87%);
+    font-weight:bold;
+}
+.profile-top p:nth-child(3){
+    font-size: 24px;   
+    font-weight:300;
+}
+
+.profile-top p span{
+    display: block;
+}
+
+/*PROFILE BOTTOM RIGHT*/
+
+.profile-bottom{
+    
+    z-index:1;
+    position: relative;
+    top:-10px;
+    padding:30px 30px 10px 20px;
+    display:flex;
+    flex-direction: column;
+    
+}
+
+.profile-bottom a{
+    text-decoration: none;
+    color:#ffffff;
+    padding-bottom: 10px;
+    font-size:12px
+}
+.profile-bottom a:hover{
+    cursor: pointer;
+}
+
+
+/*INFORMATION LEFT*/
+
+.information-left{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    grid-template-rows: repeat(2,1fr);
+    gap: 16px;
+    
+}
+
+/*INFORMATION LEFT CARDS*/
+
+.card-container{
+    position: relative;
+    height:auto;
+    width: 180px;
+    border-radius: 10px;
+    overflow: hidden;
+    
+}
+.card-container > img{
+  height:50px;
+  object-fit: cover;
+  position: absolute;
+  right: 5%;
+  top:-5%
+  
+}
+.card-data{
+    position:relative;
+    height:125px;
+    width:100%;
+    padding:10px 20px;
+    background-color:hsl(235, 46%, 20%);
+    top:20%;
+    border-radius: 10px;
+    
+}
+
+.card-data > span{
+    display: inline-block;
+    font-size:38px;
+    padding-bottom: 10px;
+    font-weight: 300;
+}
+
+.card-data > p{
+    font-size:12px; 
+    color: hsl(236, 100%, 87%);  
+}
+
+.card-data__header{
+    padding-bottom: 10px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    
+}
+.card-data__header  img{
+    height:5px;
+    cursor: pointer;
+}
+
+
+
+.card-work-background{
+    background-color:hsl(15, 100%, 70%);
+}
+
+.card-play-background{
+    background-color:hsl(195, 74%, 62%);
+}
+
+.card-study-background{
+    background-color:hsl(348, 100%, 68%);
+}
+
+.card-exercise-background{
+    background-color:hsl(145, 58%, 55%);
+}
+
+.card-social-background{
+    background-color:hsl(264, 64%, 52%);
+}
+
+.card-selfcare-background{
+    background-color:hsl(43, 84%, 65%);
+}   
+
+/*ATTRIBUTION*/
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
