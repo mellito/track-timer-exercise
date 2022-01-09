@@ -25,7 +25,7 @@ body{
     width:auto;
     display:flex;
     gap:16px;
-    overflow:hidden;
+    
 }
 
 
@@ -40,28 +40,31 @@ body{
 /*PROFILE TOP RIGHT*/
 
 .profile-top{
+    display:flex;
+    flex-direction: column;
     position:relative;
     padding:20px 60px 50px 20px;
     background-color:hsl(246, 80%, 60%);
     border-radius: 10px;   
-    text-align: left; 
     z-index: 2;
 }
 
 
 .profile-top img{
     height:50px;
+    width:50px;
     border-radius: 50%;
     border: 2px solid #ffffff;
     margin-bottom:20px;
+    object-fit: cover;
 }
 
-.profile-top p:nth-child(2){
+.profile-top div p:nth-child(1){
     font-size: 9px;
     color:hsl(236, 100%, 87%);
     font-weight:bold;
 }
-.profile-top p:nth-child(3){
+.profile-top p:nth-child(2){
     font-size: 24px;   
     font-weight:300;
 }
@@ -109,7 +112,7 @@ body{
 .card-container{
     position: relative;
     height:auto;
-    width: 180px;
+    width: 150px;
     border-radius: 10px;
     overflow: hidden;
     
@@ -133,17 +136,15 @@ body{
     
 }
 
-.card-data > span{
-    display: inline-block;
-    font-size:38px;
-    padding-bottom: 10px;
-    font-weight: 300;
+.card-data:hover
+{
+    background-color:hsl(235, 45%, 61%);
+    cursor:pointer;
 }
 
-.card-data > p{
-    font-size:12px; 
-    color: hsl(236, 100%, 87%);  
-}
+
+
+
 
 .card-data__header{
     padding-bottom: 10px;
@@ -156,6 +157,26 @@ body{
     height:5px;
     cursor: pointer;
 }
+
+.card-data__info{
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.card-data__info span{
+    display: inline-block;
+    font-size:38px;
+    padding-bottom: 10px;
+    font-weight: 300;
+}
+
+.card-data__info p{
+    font-size:12px; 
+    color: hsl(236, 100%, 87%);  
+}
+
+
 
 
 
@@ -186,3 +207,60 @@ body{
 /*ATTRIBUTION*/
 .attribution { font-size: 11px; text-align: center; }
 .attribution a { color: hsl(228, 45%, 44%); }
+
+@media (max-width:680px){
+    
+    .container{
+        overflow:scroll;
+    }
+     .container-tracker{
+         flex-direction: column;
+         width: 90%;
+         height: 90%;
+     }
+
+     .card-container{
+         width:100%;
+        
+     }
+
+     .information-left{
+        grid-template-columns:1fr;         
+    }
+
+    .card-data__info{
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .card-data__info span{
+        font-size:30px;  
+    }
+    
+    .card-data__info p{
+        font-size:18px;  
+    }
+
+    .profile-top{
+        padding:10px 0px 10px 20px;
+        align-items: center;
+        flex-direction: row;
+        height:auto;
+    }
+
+    .profile-top p span{
+        display: inline;
+    }
+    
+
+    .profile-bottom{
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    
+    .profile-top img{
+        margin-right: 10px;
+        margin-bottom:0px;
+        
+    }
+}
